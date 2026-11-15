@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
-```html
 <head>
     <!-- Character Encoding & Responsive Design -->
     <meta charset="UTF-8">
@@ -86,11 +85,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Main Stylesheet -->
+    <style>#intro-loader{position:fixed;inset:0;z-index:5000;background:#060911;display:grid;place-items:center;animation:lf .01s 4.5s forwards}#intro-loader.is-done{background:transparent}#intro-loader svg{width:120px;height:120px}#intro-loader circle{fill:none}@keyframes lf{to{opacity:0;visibility:hidden;pointer-events:none}}</style>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css?v=2">
 
 </head>
 
 <body>
+
+  <div id="intro-loader" aria-hidden="true"><div class="panel top"></div><div class="panel bottom"></div><div class="mark"><svg width="120" height="120" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg><b>K</b></div></div>
 
   <!-- Top Scroll Progress Indicator -->
   <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
@@ -268,13 +271,15 @@
     </section>
 
 
+    <div class="tech-marquee" aria-hidden="true"><div class="marquee-track"><span>Python</span><span>FastAPI</span><span>MySQL</span><span>JavaScript</span><span>Java</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Git</span><span>GitHub</span><span>REST APIs</span><span>Gemini</span><span>Python</span><span>FastAPI</span><span>MySQL</span><span>JavaScript</span><span>Java</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Git</span><span>GitHub</span><span>REST APIs</span><span>Gemini</span></div></div>
+
     <!-- ==========================================================================
          HR-FOCUSED "WHY HIRE ME?" SECTION (IMMEDIATE RECRUITER IMPACT)
          ========================================================================== -->
     <section id="why-hire-me" class="section why-hire-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">01 — VALUE PROPOSITION</span>
+          <span class="section-badge" aria-label="Value Proposition"><i class="fa-solid fa-star" aria-hidden="true"></i></span>
           <h2 class="section-title">Why Hire Me?</h2>
           <p class="section-subtitle">Focused on learning, building, and solving real-world problems.</p>
         </div>
@@ -371,7 +376,7 @@
 
           <!-- Left Column: Narrative Content -->
           <div class="about-left-col fade-in-up">
-            <span class="section-badge">02 — ABOUT ME</span>
+            <span class="section-badge" aria-label="About Me"><i class="fa-solid fa-user" aria-hidden="true"></i></span>
             <h2 class="about-heading">
               Turning Ideas Into Practical Solutions.
             </h2>
@@ -484,7 +489,7 @@
     <section id="skills" class="section skills-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">03 — TECHNICAL PROFICIENCY</span>
+          <span class="section-badge" aria-label="Technical Proficiency"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
           <h2 class="section-title">Technical Skills</h2>
           <p class="section-subtitle">Categorized competencies developed through practical application and real-world
             project building.</p>
@@ -603,7 +608,7 @@
     <section id="projects" class="section projects-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">04 — PRACTICAL PORTFOLIO</span>
+          <span class="section-badge" aria-label="Practical Portfolio"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-subtitle">Practical applications built to solve real-world problems.</p>
         </div>
@@ -915,7 +920,7 @@ async def generate_response(payload: QuerySchema):
     <section id="process" class="section process-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">05 — ENGINEERING PROCESS</span>
+          <span class="section-badge" aria-label="Engineering Process"><i class="fa-solid fa-gears" aria-hidden="true"></i></span>
           <h2 class="section-title">How I Build</h2>
           <p class="section-subtitle">A structured, disciplined approach to engineering reliable software from first
             concept to final deployment.</p>
@@ -970,7 +975,7 @@ async def generate_response(payload: QuerySchema):
     <section id="certifications" class="section cert-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">06 — CREDENTIALS</span>
+          <span class="section-badge" aria-label="Credentials"><i class="fa-solid fa-award" aria-hidden="true"></i></span>
           <h2 class="section-title">Certifications</h2>
           <p class="section-subtitle">Formal technical certifications validating my hands-on knowledge in software
             development.</p>
@@ -1035,7 +1040,7 @@ async def generate_response(payload: QuerySchema):
     <section id="education" class="section education-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <span class="section-badge">07 — ACADEMIC JOURNEY</span>
+          <span class="section-badge" aria-label="Academic Journey"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
           <h2 class="section-title">Education</h2>
           <p class="section-subtitle">Academic foundations in computer science engineering and problem solving.</p>
         </div>
@@ -1092,7 +1097,7 @@ async def generate_response(payload: QuerySchema):
     <section id="resume-section" class="section resume-cta-section">
       <div class="container">
         <div class="cta-banner-card fade-in-up">
-          <div class="cta-badge">08 — CURRICULUM VITAE</div>
+          <div class="cta-badge" aria-label="Curriculum Vitae"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
           <h2 class="cta-heading">Interested in my profile?</h2>
           <p class="cta-subtext">
             Explore my resume to learn more about my education, technical skills, projects, and experience.
@@ -1119,7 +1124,7 @@ async def generate_response(payload: QuerySchema):
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="section-header fade-in-up" style="text-align: left; margin-bottom: 36px; max-width: 100%;">
-          <span class="section-badge">09 — GET IN TOUCH</span>
+          <span class="section-badge" aria-label="Get In Touch"><i class="fa-solid fa-star" aria-hidden="true"></i></span>
           <h2 class="section-title">Let's Connect</h2>
           <p class="section-subtitle" style="margin: 0; max-width: 650px;">
             Have a project, opportunity, or collaboration in mind? I'd love to hear from you.
@@ -1370,6 +1375,7 @@ async def generate_response(payload: QuerySchema):
   <!-- Configuration Script -->
   <script src="js/config.js"></script>
   <!-- Main JavaScript Application Logic -->
+  <script src="js/animations.js?v=2"></script>
   <script src="js/main.js"></script>
 </body>
 
